@@ -1,0 +1,261 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ここからCSSを書いていきましょう */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background-color:rgba(34,49,52,0.9);
+  z-index:10;
+}
+
+.header-content{
+  width:90%;
+  margin:0 auto;
+  display:flex;
+}
+
+.header-logo img{
+  width:124px;
+  padding:20px 0;
+}
+
+.header-link{
+  margin-left:auto;
+  height:68.84px;
+  line-height:68px;
+  padding:0 25px;
+  background-color:rgba(255,255,255,0.3);
+}
+
+.header-link:hover{
+  background-color:rgba(255,255,255,0.5);
+  transition:all 0.5s;
+}
+
+.header-link a{
+  color:white;
+}
+
+main{
+  width:100%;
+}
+
+.main-visual{
+  width:100%;
+  padding:180px 0 100px;
+  background-image:url(https://prog-8.com/images/html/advanced/top.png);
+  background-size:cover;
+  text-align:center;
+}
+
+.visual-headline{
+  font-size:45px;
+  color:white;
+  opacity:0.7;
+  letter-spacing:5px;
+}
+
+.main-visual-content p{
+  color:white;
+  opacity:0.7;
+}
+
+.visual-text{
+  margin-bottom:40px;
+}
+
+.or{
+  margin:25px 0;
+}
+
+
+.btn{
+  color:white;
+  padding:10px 24px;
+  border-radius:4px;
+  opacity:0.8;
+}
+
+.btn:hover{
+  opacity:1;
+}
+
+.new{
+  background-color:#239b76;
+}
+
+.facebook{
+  background-color:#3b5998;
+  margin-right:10px;
+}
+
+.twitter{
+  background-color:#55acee;
+}
+
+.fa{
+  margin-right:5px;
+}
+
+.main-area{
+  width:100%;
+  padding-bottom:50px;
+  margin:0 auto;
+  background-color:#f7f7f7;
+  text-align:center;
+}
+
+.main-area-headline{
+  padding:80px 0 50px;
+  font-weight:normal;
+  color:#5f5d60;
+}
+
+.main-contents{
+  width:100%;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.main-contents-item{
+  width:25%;
+  position:relative;
+}
+
+.item-headline{
+  width:100%;
+  position:absolute;
+  top:90px;
+  color:white;
+}
+
+.main-contents-text{
+  width:80%;
+  margin:15px auto 0;
+  font-size:13px;
+  color:#b3aeb5;
+}
+
+.main-form{
+  width:100%;
+  margin:0 auto;
+  padding:80px 0;
+  text-align:center;
+}
+
+.main-form h2{
+  font-weight:normal;
+  color:#5f5d60;
+}
+
+.main-form h3{
+  color:#5f5d60;
+}
+
+.form-submit{
+  margin-top:50px;
+}
+
+.form-submit a{
+  padding:15px 40px;
+  border-radius:4px;
+  background-color:#5dca88;
+  color:white;
+  box-shadow: 0 7px #1a7940;
+  opacity:0.8;
+}
+
+.form-submit a:hover{
+  opacity:1;
+}
+
+.form-submit a:active{
+  box-shadow:none;
+  position:relative;
+  top:7px;
+}
+
+footer{
+  border-top:1px solid #eee;
+}
+
+.footer-logo{
+  width:90%;
+  margin:0 auto;
+  padding:30px 0;
+}
+
+.footer-logo img{
+  width:124px;
+}
+
+.footer-logo p{
+  font-size:12px;
+  color:#b3aeb5;
+}
+
+@media screen and (max-width:768px){
+  .main-contents-item{
+    width:50%;
+    margin-bottom:25px;
+  }
+}
+
+@media screen and (max-width:425px){
+  .main-visual-content p{
+    font-size:15px
+  }
+  
+  .visual-text{
+    padding:0 10px;
+  }
+  
+  .main-form h2{
+    font-size:13px;
+  }
+}
+
+@media screen and (max-width:375px){
+  .main-contents-item{
+    width:100%;
+    margin-bottom:25px;
+  }
+  
+  .btn{
+    padding:10px 15px;
+  }
+}
